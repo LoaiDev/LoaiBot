@@ -13,4 +13,4 @@ async def ban(ctx, member: discord.Member, *, reason=None):
     if member.id in config("immunes"):
         await ctx.send(f"You can not ban this user")
         return
-    await member.ban(reason=f"{ctx.author} banned them for {reason}")
+    await member.ban(reason=f"{reason}, Banned by: {ctx.author}")

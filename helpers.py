@@ -1,6 +1,7 @@
 import json
 import os
 from typing import Optional
+from config import config as configList
 
 
 def read_json(filename):
@@ -14,7 +15,7 @@ def write_json(filename, data):
 
 
 def config(name: Optional[str] = None):
-    config = read_json('config.json')
+    config = configList()
     if name:
         keywords = name.split('.')
         for keyword in keywords:

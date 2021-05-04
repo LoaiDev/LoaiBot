@@ -10,7 +10,7 @@ def setup(bot):
 @is_developer()
 @commands.command()
 async def addserver(ctx):
-    link = config("invite.link").replace("{client_id}", config("invite.client_id"))
+    link = discord.utils.oauth_url(config("invite.client_id"))
     embed = discord.Embed(
         title="Add Me To Your Server",
         description=f"[Click To Add]({link})",

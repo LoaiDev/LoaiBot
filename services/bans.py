@@ -3,7 +3,7 @@ import discord
 
 def generate_embed(ban_entry):
     user = ban_entry.user
-    embed = discord.Embed(color=discord.Color.red())
+    embed = discord.Embed(color=discord.Color(0xFF0000))
     embed.title = f"{user.name}#{user.discriminator}"
     embed.set_thumbnail(url=user.avatar_url)
     embed.add_field(name="**Reason:**", value=ban_entry.reason)

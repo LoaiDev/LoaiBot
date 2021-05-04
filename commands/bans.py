@@ -2,6 +2,7 @@ from discord.ext import commands
 from services.bans import generate_embed, search_bans
 from typing import Optional
 
+
 def setup(bot):
     bot.add_command(bans)
 
@@ -19,4 +20,3 @@ async def bans(ctx, search: Optional[str] = None):
             await ctx.send(embed=embed)
     elif len(bans) > 10:
         await ctx.send(f"```Found more than 10 bans with the name \"{search}\"\n Please use a more specific search```")
-
