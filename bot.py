@@ -113,27 +113,27 @@ async def on_message(message):
 #     embed = discord.Embed(title="Add Me To Your Server", description=f"[Click To Add](https://discord.com/api/oauth2/authorize?client_id=819425223328661504&scope=bot)", color = (0x2ACCCF))
 #     await ctx.send(em bed=embed)
 
-@client.command(pass_context=True)
-@commands.has_permissions(ban_members=True)
-async def badwords(ctx):
-    await ctx.send(f"```py\nhatespeech = {hatespeech}\n```")
+# @client.command(pass_context=True)
+# @commands.has_permissions(ban_members=True)
+# async def badwords(ctx):
+#     await ctx.send(f"```py\nhatespeech = {hatespeech}\n```")
 
-@client.command(pass_context=True)
-@commands.has_permissions(ban_members=True)
-async def ban(ctx, member : discord.Member, *, reason=None):
-    if member.id == 474566033798332417:
-        await ctx.send("Could not ban that user.")
-        return
-    if member.id == 820361265087643699:
-        await ctx.send("Could not ban that user.")
-        return
-    await member.ban(reason=f"{ctx.author} banned them for {reason}")
+# @client.command(pass_context=True)
+# @commands.has_permissions(ban_members=True)
+# async def ban(ctx, member : discord.Member, *, reason=None):
+#     if member.id == 474566033798332417:
+#         await ctx.send("Could not ban that user.")
+#         return
+#     if member.id == 820361265087643699:
+#         await ctx.send("Could not ban that user.")
+#         return
+#     await member.ban(reason=f"{ctx.author} banned them for {reason}")
 
-@client.command(pass_context=True)
-@commands.has_permissions(administrator=True)
-async def prefixjson(ctx):
-    file = discord.File("prefix.json")
-    await ctx.author.send(file=file)
+# @client.command(pass_context=True)
+# @commands.has_permissions(administrator=True)
+# async def prefixjson(ctx):
+#     file = discord.File("prefix.json")
+#     await ctx.author.send(file=file)
 
 @client.command(pass_context=True)
 @commands.has_permissions(ban_members=True)

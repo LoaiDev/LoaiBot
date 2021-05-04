@@ -26,18 +26,22 @@ def set_badwords(badwords):
 
 
 def add_badwords(badwords):
+    affected_words = list()
     new_badwords = get_badwords()
     for badword in badwords:
         if badword not in new_badwords:
             new_badwords.append(badword)
+            affected_words.append(badword)
     set_badwords(new_badwords)
-    return
+    return affected_words
 
 
 def remove_badwords(badwords):
+    affected_words = list()
     new_badwords = get_badwords()
     for badword in badwords:
         if badword in new_badwords:
             new_badwords.remove(badword)
+            affected_words.append(badword)
     set_badwords(new_badwords)
-    return
+    return affected_words
