@@ -1,11 +1,11 @@
-import os
+from os import getenv
 
 
 def config():
     return {
         "prefix": {
             "file_name": "prefix.json",
-            "default": "$"
+            "default": getenv("default_prefix", "+")
         },
         "storage": {
             "folder_name": "storage"
@@ -15,7 +15,7 @@ def config():
             "default": "minecraft"
         },
         "bot": {
-            "token": os.getenv("bot_token")
+            "token": getenv("bot_token")
         },
         "commands": {
             "folder_name": "commands"
