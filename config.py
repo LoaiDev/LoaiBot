@@ -23,11 +23,17 @@ def config():
         "invite": {
             "client_id": "837510590749474856"
         },
-        "badwords": {
-            "file_name": "badwords.json"
+        "filteredwords": {
+            "file_name": "filteredwords.json",
+            "channel_storage_name": "filtered",
+            "ping_role_storage_name": "filtered_ping",
+            "ignored_roles_storage_name": "filtered_ignored"
         },
         "roles": {
             "file_name": "roles.json"
+        },
+        "channels": {
+            "file_name": "channels.json"
         },
         "developers": [
             474566033798332417,

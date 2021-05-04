@@ -1,5 +1,6 @@
 from helpers import storage, config, write_json, read_json
 from typing import Optional, Union
+from discord.ext import commands
 
 
 def get_file():
@@ -47,5 +48,6 @@ def remove_prefix(guild_id: Union[str, int]):
     set_prefixes(prefixes)
 
 
-def get_current_prefix(bot, message):
-    return get_prefix(message.guild.id)
+async def get_current_prefix(bot, message):
+    server_prefix = get_prefix(message.guild.id)
+    return commands.when_mentioned_or(server_prefix)(bot, message)

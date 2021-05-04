@@ -115,7 +115,7 @@ async def on_message(message):
 
 # @client.command(pass_context=True)
 # @commands.has_permissions(ban_members=True)
-# async def badwords(ctx):
+# async def filteredwords(ctx):
 #     await ctx.send(f"```py\nhatespeech = {hatespeech}\n```")
 
 # @client.command(pass_context=True)
@@ -233,16 +233,16 @@ async def on_message(message):
 #     await member.remove_roles(mutedRole)
 #     await ctx.send(f"Unmuted {member.mention}")
 #     await member.send(f"You were unmuted in the server {ctx.guild.name}")
-
-@client.command(pass_context=True)
-@commands.has_permissions(administrator=True)
-async def poll(ctx, *, message):
-    embed = discord.Embed(title="Poll", description=f"{message}", color = (0x2ACCCF))
-    embed.set_footer(text=f"Poll started by {ctx.author}", icon_url=ctx.author.avatar_url)
-    msg = await ctx.channel.send(embed=embed)
-    await msg.add_reaction('👍')
-    await msg.add_reaction('👎')
-    await ctx.message.delete()
+#
+# @client.command(pass_context=True)
+# @commands.has_permissions(administrator=True)
+# async def poll(ctx, *, message):
+#     embed = discord.Embed(title="Poll", description=f"{message}", color = (0x2ACCCF))
+#     embed.set_footer(text=f"Poll started by {ctx.author}", icon_url=ctx.author.avatar_url)
+#     msg = await ctx.channel.send(embed=embed)
+#     await msg.add_reaction('👍')
+#     await msg.add_reaction('👎')
+#     await ctx.message.delete()
 
 # @client.command(pass_context=True)
 # @commands.has_permissions(manage_messages=True)

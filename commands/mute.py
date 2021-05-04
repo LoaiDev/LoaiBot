@@ -16,7 +16,7 @@ async def mute(ctx, member: discord.Member, *, reason=None):
         return
     role_id = int(get_role(ctx.guild.id, "m"))
     if not role_id:
-        await ctx.send("No Muted role found. Use -setmutedrole (role) command to set it")
+        await ctx.send(f"No Muted role found. Use {ctx.prefix}setmutedrole (role) command to set it")
         return
     role = discord.utils.get(ctx.guild.roles, id=role_id)
     if discord.utils.get(member.roles, id=role_id):

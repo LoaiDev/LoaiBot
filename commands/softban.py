@@ -16,7 +16,7 @@ async def softban(ctx, member: discord.Member):
         return
     role_id = int(get_role(ctx.guild.id, "b"))
     if not role_id:
-        await ctx.send("No Banned role found. Use -setbannedrole (role) command to set it")
+        await ctx.send(f"No Banned role found. Use {ctx.prefix}setbannedrole (role) command to set it")
         return
     role = discord.utils.get(ctx.guild.roles, id=role_id)
     if discord.utils.get(member.roles, id=role_id):

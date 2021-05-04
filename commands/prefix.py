@@ -15,8 +15,8 @@ async def prefix(ctx):
 
 
 @commands.has_permissions(administrator=True)
-@prefix.command()
-async def set(ctx, *, prefix):
+@prefix.command(name="set")
+async def prefix_set(ctx, *, prefix):
     set_prefix(ctx.guild.id, prefix)
     await ctx.send(f"Your server's prefix is now: `{prefix}`")
 
