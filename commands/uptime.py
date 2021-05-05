@@ -17,7 +17,7 @@ def setup_command(start_time):
         difference = int(round(current_time - start_time))
         text = str(datetime.timedelta(seconds=difference))
         embed = discord.Embed(color=0x2ACCCF)
-        embed.add_field(name="***SugarBot Has Been Alive For***", value=text)
+        embed.add_field(name="***LoaiBot Has Been Alive For***", value=text)
         await ctx.send(embed=embed)
 
     return uptime
